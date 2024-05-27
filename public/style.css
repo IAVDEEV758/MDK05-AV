@@ -1,8 +1,7 @@
 @font-face {
     font-family:'MyFont';
-    src: url('./public/DolomanPavljenko.otf') format('OpenType');
+    src: url('public/DolomanPavljenko.otf') format('OpenType');
   }
-
 body {
     background-color: white;
     margin: 0;
@@ -14,7 +13,7 @@ header {
     background-color: #466a45;
     text-align: center;
     color: white;
-    font-family: MyFont;
+    font-family: 'MyFont';
 }
 
 header h1 {
@@ -37,14 +36,12 @@ button {
 
 h2 {
     text-align: center;
-    font-family: MyFont;
-
 }
 
 #n1 {
     height: 50px;
-    width: 300px;
-    font-family: MyFont;
+    width: 200px;
+    font-family: 'MyFont';
     
 }
 
