@@ -1,0 +1,26 @@
+body {
+background-color: white;
+}
+
+header {
+    background-color: purple;
+    text-align: center;
+
+}
+
+button {
+    background-color: #b00b69;
+    color: white;
+    border: 0;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: purple;
+}
+nav {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+
+}

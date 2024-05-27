@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>МДК 05.01 Авдеева Игоря</title>
+</head>
+<body>
+    <header>
+        <h1>Практические работы </h1>
+        <nav>
+            <ul>
+                <button href="#section1", id="h">Обо мне</button>
+                <button href="#section2" id="h">Нормативные документы</button>
+                <button href="#section3" id="h">Практические работы</button>
+                <button href="#section3" id="h">Практика</button>
+            </ul>
+        </nav>
+    </header>
+    <main>  
+        <h1>Перейти:
+        <button href="#section1", id="n1">1-10</button>
+        <button href="#section2" id="n1">11-20</button>
+        <button href="#section3" id="n1">21-30</button>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Поиск...">
+            <button onclick="searchText()">Поиск</button>
+        </div>
+        </h1>
+        <section id="section1">
+            <h2>1-10</h2>
+            <article>
+                <h3>Практическая работа №1</h3>
+                <p>Здесь можно скачать документ <a href="files/document1.pdf" download>Document 1</a>.</p>
+            </article>
+            <article>
+                <h3>Практическая работа №2</h3>
+                <p>Здесь можно скачать документ <a href="files/document1.pdf" download>Document 1</a>.</p>
+            </article>
+            <article>
+                <h3>Практическая работа №3</h3>
+                <p>Здесь можно скачать документ <a href="files/document1.pdf" download>Document 1</a>.</p>
+            </article>
+            <article>
+                <h3>Практическая работа №4</h3>
+                <p>Здесь можно скачать документ <a href="files/document1.pdf" download>Document 1</a>.</p>
+            </article>
+            <article>
+                <h3>Практическая работа №5</h3>
+                <p>Здесь можно скачать документ <a href="files/document1.pdf" download>Document 1</a>.</p>
+            </article>
+            <article>
+                <h3>Практическая работа №6</h3>
+                <p>Здесь можно скачать документ <a href="files/document1.pdf" download>Document 1</a>.</p>
+            </article>
+            <article>
+                <h3>Практическая работа №7</h3>
+                <p>Здесь можно скачать документ <a href="files/document1.pdf" download>Document 1</a>.</p>
+            </article>
+            <article>
+                <h3>Практическая работа №8</h3>
+                <p>Здесь можно скачать документ <a href="files/document1.pdf" download>Document 1</a>.</p>
+            </article>
+            <article>
+                <h3>Практическая работа №9</h3>
+                <p>Здесь можно скачать документ <a href="files/document1.pdf" download>Document 1</a>.</p>
+            </article>
+            <article>
+                <h3>Практическая работа №10</h3>
+                <p>Здесь можно скачать документ <a href="files/document1.pdf" download>Document 1</a>.</p>
+            </article>
+            
+        </section>
+
+        <section id="section2">
+            <h2>11-20</h2>
+            <article>
+                <h3>Документ 2</h3>
+                <p>Здесь можно скачать документ <a href="files/document2.pdf" download>Document 2</a>.</p>
+            </article>
+        </section>
+
+        <section id="section3">
+            <h2>21-30</h2>
+            <article>
+                <h3>Документ 3</h3>
+                <p>Здесь можно скачать документ <a href="files/document3.pdf" download>Document 3</a>.</p>
+            </article>
+        </section>
+
+    </main>
+    <footer>
+        <p>© 2024 Авдеев Игорь</p>
+    </footer>
+</body>
+<script>
+    function searchText() {
+        // Очистка предыдущих результатов поиска
+        const highlightedElements = document.querySelectorAll('.highlight');
+        highlightedElements.forEach(el => {
+            el.classList.remove('highlight');
+        });
+
+        // Получение текста поиска
+        const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+        if (searchTerm) {
+            // Поиск и подсветка текста
+            const content = document.querySelectorAll('main section article p');
+            content.forEach(p => {
+                const text = p.innerText.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    const regex = new RegExp(`(${searchTerm})`, 'gi');
+                    p.innerHTML = p.innerHTML.replace(regex, `<span class="highlight">$1</span>`);
+                }
+            });
+        }
+    }
+</script>
+</html>
