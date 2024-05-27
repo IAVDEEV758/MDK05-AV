@@ -23,10 +23,6 @@
         <button href="#section1", id="n1">1-10</button>
         <button href="#section2" id="n1">11-20</button>
         <button href="#section3" id="n1">21-30</button>
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Поиск...">
-            <button onclick="searchText()">Поиск</button>
-        </div>
         </h1>
         <section id="section1">
             <h2>1-10</h2>
@@ -94,28 +90,4 @@
         <p>© 2024 Авдеев Игорь</p>
     </footer>
 </body>
-<script>
-    function searchText() {
-        // Очистка предыдущих результатов поиска
-        const highlightedElements = document.querySelectorAll('.highlight');
-        highlightedElements.forEach(el => {
-            el.classList.remove('highlight');
-        });
-
-        // Получение текста поиска
-        const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-
-        if (searchTerm) {
-            // Поиск и подсветка текста
-            const content = document.querySelectorAll('main section article p');
-            content.forEach(p => {
-                const text = p.innerText.toLowerCase();
-                if (text.includes(searchTerm)) {
-                    const regex = new RegExp(`(${searchTerm})`, 'gi');
-                    p.innerHTML = p.innerHTML.replace(regex, `<span class="highlight">$1</span>`);
-                }
-            });
-        }
-    }
-</script>
 </html>
