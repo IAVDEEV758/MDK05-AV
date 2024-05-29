@@ -93,3 +93,8 @@ article {
 #pere {
     left: 30px; 
 }
+
+table {
+    width: 100%;
+    text-align: center;
+}
