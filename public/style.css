@@ -3,10 +3,12 @@
     src: url('public/DolomanPavljenko.otf') format('OpenType');
   }
 body {
-    background-color: white;
+    background-color: #202124;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    color: #ffffffcc;
+
 
     
 }
@@ -23,6 +25,13 @@ header h1 {
     margin: 0;
 }
 
+a{
+    color: #5f865d;
+}
+
+a:visited{
+    color: orange;
+}
 
 footer {
     background-color: #466a45;
