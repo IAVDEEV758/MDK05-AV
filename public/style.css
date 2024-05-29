@@ -6,6 +6,9 @@ body {
     background-color: white;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+
+    
 }
 
 header {
@@ -20,6 +23,18 @@ header h1 {
     margin: 0;
 }
 
+
+footer {
+    background-color: #466a45;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+
+}
 button {
     background-color: #3b5a3a;
     color: white;
@@ -31,6 +46,12 @@ button {
     height: 50px;
     width: 300px;
     
+}
+
+#hh {
+    background-color: #5f865d;
+    height: 50px;
+    width: 300px;
 }
 
 h2 {
@@ -60,4 +81,8 @@ article {
     margin-bottom: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
+}
+
+#pere {
+    left: 30px; 
 }
