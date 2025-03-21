@@ -1,30 +1,67 @@
+:root {
+    --primary-color: #466a45;
+    --primary-dark: #3b5a3a;
+    --primary-light: #5f865d;
+    --background-color: #202124;
+    --text-color: #ffffffcc;
+    --card-background: rgba(255, 255, 255, 0.05);
+    --transition-speed: 0.3s;
+    --view-button-color: #8b4343;
+    --view-button-hover: #a65151;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family:'MyFont';
     src: url('public/DolomanPavljenko.otf') format('OpenType');
   }
+
 body {
-    background-color: #202124;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    color: #ffffffcc;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 
 
     
 }
 
 header {
-    background-color: #466a45;
+    background-color: var(--primary-color);
+    padding: 2rem 1rem;
     text-align: center;
-    color: white;
-    font-family: 'MyFont';
 }
 
 header h1 {
-    
-    margin: 0;
+    font-family: 'MyFont', sans-serif;
+    color: white;
+    margin-bottom: 2rem;
+    font-size: clamp(2rem, 4vw, 3rem);
 }
 
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav li {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+}
 
 a:visited{
     color: orange;
@@ -40,10 +77,22 @@ footer {
 
 }
 button {
-    background-color: #3b5a3a;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary-dark);
     color: white;
-    border: 0;
-    transition: background-color 0.3s;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+
+}
+
+main {
+    flex: 1;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 #h {
@@ -70,7 +119,9 @@ h2 {
 }
 
 button:hover {
-    background-color: #5f865d;
+    background-color: var(--primary-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 nav {
     list-style: none;
