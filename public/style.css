@@ -1,8 +1,8 @@
 :root {
     /* Светлая тема по умолчанию */
-    --primary-color: #77dd77; /* Светлый фон для header/footer */
-    --primary-dark: #90ee90;  /* Темнее для кнопок */
-    --primary-light: #ffffff; /* Светлее для hover */
+    --primary-color: #50c878; /* Светлый фон для header/footer */
+    --primary-dark: #77dd77;  /* Темнее для кнопок */
+    --primary-light: #addfad; /* Светлее для hover */
     --background-color: #ffffff; /* Белый фон */
     --text-color: #000000;    /* Черный текст */
     --card-background: rgba(0, 0, 0, 0.05); /* Легкий серый для карточек */
