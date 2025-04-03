@@ -10,6 +10,7 @@
     <header>
         <section id="section0"></section>
         <h1>Практика</h1>
+        <button id="theme-toggle">🌙</button>
         <nav>
             <ul>
                 <button onclick="location.href='https://iavdeev758.github.io/MDK05-AV'", id="h">Обо мне</button>
@@ -32,7 +33,7 @@
 				</tr>
                 <tr>
 					
-					<td><td><button style="width: 200px; background-color: brown;" onclick="location.href='Дневник ПП ПМ 05 Авдеев И.А..pdf'" id="h">Посмотреть электронный дневник</button></td></td>
+					<td><td><button id="red" onclick="location.href='Дневник ПП ПМ 05 Авдеев И.А..pdf'" id="h">Посмотреть электронный дневник</button></td></td>
                     <td><td style="color: rgb(145, 145, 145);" >PDF можно смотреть и по ссылке скачивания</td></td>
 				</tr>
 			
@@ -43,5 +44,27 @@
     <footer style="position: fixed; bottom: 0; ">
         <p>© 2025 Авдеев Игорь</p>
     </footer>
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        // Проверяем сохраненную тему при загрузке страницы
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-theme');
+            toggleButton.textContent = '☀️';
+        } else {
+            body.classList.remove('dark-theme');
+            toggleButton.textContent = '🌙';
+        }
+
+        // Обработчик переключения темы
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            const isDark = body.classList.contains('dark-theme');
+            toggleButton.textContent = isDark ? '☀️' : '🌙';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+    </script>
 </body>
 </html>

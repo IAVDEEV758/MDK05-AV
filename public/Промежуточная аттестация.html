@@ -10,6 +10,7 @@
     <header>
         <section id="section0"></section>
         <h1>Промежуточная аттестация</h1>
+        <button id="theme-toggle">🌙</button>
         <nav>
             <ul>
                 <button onclick="location.href='https://iavdeev758.github.io/MDK05-AV'", id="h">Обо мне</button>
@@ -28,7 +29,7 @@
 				<tr>
 					
 					<td><td><button onclick="location.href='28.06.pdf'" id="h">Скачать/посмотреть диф. зачёт от 28.06.2022</button><p style='color: rgba(240, 248, 255, 0);'>d<p style='color: rgba(240, 248, 255, 0);'>p</p></td></td>
-                    <td><td><button onclick="location.href='07.12.docx'" id="h">Скачать диф. зачёт от 07.12.2022</button> <p><button style="width: 200px; background-color: brown;"  onclick="location.href='07.12.pdf'" id="h">Посмотреть диф. зачёт от 07.12.2022</button></td></td>
+                    <td><td><button onclick="location.href='07.12.docx'" id="h">Скачать диф. зачёт от 07.12.2022</button> <p><button id="red"  onclick="location.href='07.12.pdf'" id="h">Посмотреть диф. зачёт от 07.12.2022</button></td></td>
                 </tr>
                 <tr>
                     <td><td></td></td>
@@ -39,5 +40,27 @@
     <footer style="position: fixed; bottom: 0; ">
         <p>© 2025 Авдеев Игорь</p>
     </footer>
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        // Проверяем сохраненную тему при загрузке страницы
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-theme');
+            toggleButton.textContent = '☀️';
+        } else {
+            body.classList.remove('dark-theme');
+            toggleButton.textContent = '🌙';
+        }
+
+        // Обработчик переключения темы
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            const isDark = body.classList.contains('dark-theme');
+            toggleButton.textContent = isDark ? '☀️' : '🌙';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+    </script>
 </body>
 </html>
