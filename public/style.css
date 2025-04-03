@@ -202,3 +202,14 @@ table {
     text-align: center;
     align-items: center;
 }
+#doc {
+    height: 50px; 
+    width: 100%; 
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary-dark);
+    color: white;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+}
